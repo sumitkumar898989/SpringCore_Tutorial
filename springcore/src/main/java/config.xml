@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context 
+ https://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ 
+    <!-- this is our bean -->
+ 	<bean class="com.springcore.Student" name="student1">
+ 		<property name="studentId">
+ 			<value>22344</value>
+ 		</property>
+ 		<property name="studentName">
+ 			<value>Sumit</value>
+ 		</property>
+ 		<property name="studentAddress" value="Bihar"/> <!-- value as a attribute -->
+ 	</bean>
+ 	
+ 	<!-- this is our 2nd bean -->
+ 	<bean class="com.springcore.Student" name="student2">
+ 		<property name="studentId">
+ 			<value>22345</value>         <!-- value as a element -->
+ 		</property>
+ 		<property name="studentName">
+ 			<value>Amit</value>
+ 		</property>
+ 		<property name="studentAddress" value="Bihar"/>
+    </bean>
+ 	
+ 	<bean class="com.springcore.Student" name="student3" p:studentId="22346" p:studentName="Raju" p:studentAddress="Rajopatti"/>
+     <!-- value as a p schema -->
+      <!-- 3 way to put value in setter injection -->
+      
+</beans>
